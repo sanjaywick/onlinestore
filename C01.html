@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PW - Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("backg.png");
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+        .container {
+            width: 350px;
+            padding: 30px;
+			margin-top: 35px;
+			margin-right: 550px;
+        }
+        .container h1, h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: darkred;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+		
+            display: block;
+            margin-bottom: 5px;
+            color: darkred;
+        }
+        .form-group input {
+            width: calc(100% - 26px);
+            padding: 10px;
+            border: 1px solid rgba(165, 42, 42, 0.7); 
+            border-radius: 25px; 
+			background-color: transparent;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 30px;
+            background-color: darkred;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        .form-group .social-login {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .form-group .social-login button {
+            margin: 0 5px;
+            padding: 8px 15px;
+            background: none;
+            color: #666;
+            transition: border-color 0.3s ease;
+        }
+        .form-group .social-login button:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Paws and Whiskers</h1>
+        <h2>Login</h2>
+        <form id="loginForm" action="login.php" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div> <br>
+            <div class="form-group">
+                <div class="social-login">
+                    <button type="button"><i class="fab fa-facebook-f"></i></button>
+                    <button type="button"><i class="fab fa-google"></i></button>
+                    <button type="button"><i class="fab fa-twitter"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username.trim() === "" || password.trim() === "") {
+                alert("Username and password are required!");
+                return false; 
+            }
+            
+            if (username.trim() === "user" || password.trim() === "pass") {
+                window.location.href = 'C11.html';
+                return false; 
+            }
+            
+            else {
+               alert("Invalid Credentials!");
+               return false;
+            }
+        }
+    </script>
+</body>
+</html>

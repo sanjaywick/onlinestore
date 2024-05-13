@@ -1,0 +1,226 @@
+<html>
+<head>
+    <title>Paws and Whiskers</title>
+    <style>
+       body {
+            font-family: cambria, sans-serif;
+			font-style: italic;
+            margin: 0;
+            padding: 0;
+			background-image: url('anime.gif');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+        }
+        header {
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #e0bbd2;
+			opacity: 0.9;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
+			opacity: 0.8;
+        }
+        .frame {
+            float: left;
+            width: 25%;
+            margin-right: 3%;
+            margin-left: 2%;
+			margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0; 
+            transition: opacity 0.5s ease-in-out; 
+        }
+
+        .frame.show {
+            opacity: 1; 
+        }
+
+        .frame img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .frame h3 {
+            margin-top: 0;
+        }
+        form {
+            margin-bottom: 20px;
+			opacity: 0.8;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        form textarea {
+            height: 100px;
+        }
+        form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            padding: 20px 0;
+            text-align: center;
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Paws and Whiskers </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="#bottom">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="frame hide" id="chain" onclick="zoomIn(this)">
+            <img src="chain.jpg" alt="Tom">
+            <h3>Tom</h3>
+            <p> <b> Rs.100 </b> <br> A cute accessory featuring everyone's favorite mischievous cat, Tom, perfect for adding a touch of nostalgia to your keyring. </p>
+        </div> 
+        <div class="frame hide" id="chain" onclick="zoomIn(this)">
+            <img src="chain2.jpg" alt="Tom and Jerry">
+            <h3> Tom and Jerry</h3>
+            <p> <b> Rs.150 </b> <br> Celebrate the classic duo with this charming keychain showcasing both Tom and Jerry, ideal for fans of the timeless cartoon. </p>
+        </div>
+        <div class="frame hide" id="chain" onclick="zoomIn(this)">
+            <img src="chain1.jpg" alt="Jerry">
+            <h3> Jerry </h3>
+            <p> <b> Rs.100 </b> <br> Keep your keys secure with this adorable keychain featuring the clever and lovable mouse, Jerry, adding charm to your everyday carry.</p>
+        </div> <br> <br> 
+        <div class="frame hide" id="hat" onclick="zoomIn(this)">
+            <img src="hat1.jpg" alt="Tom">
+            <h3> Tom and Jerry </h3>
+            <p> <b> Rs.350 </b> <br> Embrace the iconic style of Tom with this stylish hat, featuring his signature colors and design, adding a playful touch to any outfit. </p>
+        </div>
+        <div class="frame hide" id="hat" onclick="zoomIn(this)">
+            <img src="hat.jpg" alt="Tom and Jerry">
+            <h3> Tom and Jerry </h3>
+            <p> <b> Rs.400 </b> <br> Combine the best of both worlds with this unique hat featuring both Tom and Jerry </p>
+        </div>
+        <div class="frame hide" id="hat" onclick="zoomIn(this)">
+            <img src="hat3.jpg" alt="Jerry">
+            <h3> Tom and Jerry </h3>
+            <p> <b> Rs.350 </b> <br> Show off your love for the witty mouse, Jerry, with this fun and vibrant hat, perfect for adding a pop of personality to your look. </p>
+        </div> <br> <br>
+        <div class="frame hide" id="doll" onclick="zoomIn(this)">
+            <img src="doll.jpg" alt="Tom">
+            <h3> Tom </h3>
+            <p> <b> Rs.500 </b> <br> Bring home the beloved cat, Tom, with this adorable plush doll, perfect for cuddling or displaying as a nostalgic decor piece. </p>
+        </div>
+        <div class="frame hide" id="doll" onclick="zoomIn(this)">
+            <img src="doll2.jpg" alt="Tom and Jerry">
+            <h3> Tom and Jerry </h3>
+            <p> <b> Rs.750 </b> <br> Enjoy double the fun with this charming set featuring both Tom and Jerry plush dolls, ideal for fans of the iconic cartoon duo.</p>
+        </div>
+        <div class="frame hide" id="doll" onclick="zoomIn(this)">
+            <img src="doll1.jpg" alt="Jerry">
+            <h3> Jerry </h3>
+            <p> <b> Rs.500 </b> <br> Capture the charm of the clever mouse, Jerry, with this delightful plush doll, adding a touch of whimsy to any room. </p>
+        </div>
+        <div style="clear: both;" id="bottom"></div>
+        <h2 style="color:white"> Contact Us </h2>
+        <form id="contactForm" action="#">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" placeholder="Your Message" required></textarea><br>
+            <input type="submit" value="Send Message">
+        </form>
+        <div id="confirmation" style="display: none; color: green;">Message sent successfully!</div>
+    </div>
+    <footer>
+        &copy; 2024 SM Pet Store
+    </footer>
+    <audio autoplay loop>
+        <source src="tj.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+window.onload = function() {
+    var frames = document.querySelectorAll('.frame');
+    var currentFrame = 0;
+    var frameInterval;
+
+    // Function to show all frames together
+    function showAllFrames() {
+        clearInterval(frameInterval); // Stop the frame interval
+        for (var i = 0; i < frames.length; i++) {
+            frames[i].classList.add('show');
+        }
+    }
+
+    // Function to show the next three frames
+    function showNextThreeFrames() {
+        // Hide all frames
+        for (var i = 0; i < frames.length; i++) {
+            frames[i].classList.remove('show');
+        }
+        // Show the next three frames
+        for (var i = currentFrame; i < currentFrame + 3 && i < frames.length; i++) {
+            frames[i].classList.add('show');
+        }
+        // Move to the next three frames
+        currentFrame = (currentFrame + 3) % frames.length;
+    }
+
+    // Initial frame display with transition
+    function initialFrameDisplay() {
+        showNextThreeFrames();
+        // Set interval to show next three frames with transition
+        frameInterval = setInterval(showNextThreeFrames, 5000); // Adjust the time interval as per your preference (in milliseconds)
+        // After 15 seconds, stop the transition and display all frames together
+        setTimeout(showAllFrames, 15000); // Adjust the time interval as per your preference (in milliseconds)
+    }
+
+    initialFrameDisplay();
+};
+    </script>
+    </script>
+</body>
+</html>
